@@ -23,7 +23,7 @@ if command == 'apply':
     # }
 
     # create slice
-    util.createSlice(ctx, experiment_name)
+    util.createSlice(ctx, experiment_name, expiration=360, renew_if_exists=True)
 
     # create sliver on clemson
     manifest = util.createSliver(ctx, cloudlab.Clemson, experiment_name,
